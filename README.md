@@ -38,7 +38,7 @@ class IPhone {
         +navegarParaTras()
     }
 
-        IPhone ..|> ReprodutorMusical
-        IPhone ..|> AparelhoTelefonico
-        IPhone ..|> NavegadorInternet
+        IPhone --> ReprodutorMusical
+        IPhone --> AparelhoTelefonico
+        IPhone --> NavegadorInternet
 ```
