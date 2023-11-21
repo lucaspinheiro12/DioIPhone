@@ -2,8 +2,22 @@
 
 ##Diagrama de classes
 
-'''mermaid
+```mermaid
 classDiagram
+
+class IPhone {
+        +tocarMusica()
+        +pausarMusica()
+        +avancarMusica()
+        +retrocederMusica()
+        +fazerChamada(numero)
+        +receberChamada(numero)
+        +desligarChamada()
+        +abrirPagina(url)
+        +fecharPagina()
+        +navegarParaFrente()
+        +navegarParaTras()
+    }
     interface ReprodutorMusical {
         +tocarMusica()
         +pausarMusica()
@@ -24,20 +38,6 @@ classDiagram
         +navegarParaTras()
     }
 
-    class IPhone {
-        +tocarMusica()
-        +pausarMusica()
-        +avancarMusica()
-        +retrocederMusica()
-        +fazerChamada(numero)
-        +receberChamada(numero)
-        +desligarChamada()
-        +abrirPagina(url)
-        +fecharPagina()
-        +navegarParaFrente()
-        +navegarParaTras()
-    }
-
     IPhone ..|> ReprodutorMusical
     IPhone ..|> AparelhoTelefonico
-'''
+```
