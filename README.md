@@ -4,8 +4,27 @@
 
 ```mermaid
 classDiagram
+    class ReprodutorMusical {
+        +tocarMusica()
+        +pausarMusica()
+        +avancarMusica()
+        +retrocederMusica()
+    }
 
-class IPhone {
+    class AparelhoTelefonico {
+        +fazerChamada(numero)
+        +receberChamada(numero)
+        +desligarChamada()
+    }
+
+    class NavegadorInternet {
+        +abrirPagina(url)
+        +fecharPagina()
+        +navegarParaFrente()
+        +navegarParaTras()
+    }
+
+    class IPhone {
         +tocarMusica()
         +pausarMusica()
         +avancarMusica()
@@ -18,27 +37,7 @@ class IPhone {
         +navegarParaFrente()
         +navegarParaTras()
     }
-    interface ReprodutorMusical {
-        +tocarMusica()
-        +pausarMusica()
-        +avancarMusica()
-        +retrocederMusica()
-    }
-
-    interface AparelhoTelefonico {
-        +fazerChamada(numero)
-        +receberChamada(numero)
-        +desligarChamada()
-    }
-
-    interface NavegadorInternet {
-        +abrirPagina(url)
-        +fecharPagina()
-        +navegarParaFrente()
-        +navegarParaTras()
-    }
-
-        IPhone --> ReprodutorMusical
-        IPhone --> AparelhoTelefonico
-        IPhone --> NavegadorInternet
+    IPhone <|.. ReprodutorMusical
+    IPhone <|.. AparelhoTelefonico
+    IPhone <|.. NavegadorInternet
 ```
