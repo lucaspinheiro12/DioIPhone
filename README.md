@@ -2,7 +2,7 @@
 
 ##Diagrama de classes
 
-```mermaid
+'''mermaid
 classDiagram
     interface ReprodutorMusical {
         +tocarMusica()
@@ -40,5 +40,4 @@ classDiagram
 
     IPhone ..|> ReprodutorMusical
     IPhone ..|> AparelhoTelefonico
-    IPhone ..|> NavegadorInternet
-```
+'''
