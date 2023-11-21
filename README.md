@@ -1,20 +1,23 @@
 # DioIPhone
 
+##Diagrama de classes
+
+```mermaid
 classDiagram
-    class ReprodutorMusical {
+    interface ReprodutorMusical {
         +tocarMusica()
         +pausarMusica()
         +avancarMusica()
         +retrocederMusica()
     }
 
-    class AparelhoTelefonico {
+    interface AparelhoTelefonico {
         +fazerChamada(numero)
         +receberChamada(numero)
         +desligarChamada()
     }
 
-    class NavegadorInternet {
+    interface NavegadorInternet {
         +abrirPagina(url)
         +fecharPagina()
         +navegarParaFrente()
@@ -35,6 +38,7 @@ classDiagram
         +navegarParaTras()
     }
 
-    ReprodutorMusical <|-- IPhone
-    AparelhoTelefonico <|-- IPhone
-    NavegadorInternet <|-- IPhone
+    IPhone ..|> ReprodutorMusical
+    IPhone ..|> AparelhoTelefonico
+    IPhone ..|> NavegadorInternet
+```
